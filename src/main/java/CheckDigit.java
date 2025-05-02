@@ -8,10 +8,8 @@ public class CheckDigit
    public static int getCheck(int num) 
    {  
      int sum = 0;
-     int adder = num;
-     for(int i = 0; i < getNumberOfDigits(num); i++){
-    sum+=((adder%10)*(7-i));
-    adder/=10;
+     for(int i = 1; i <= getNumberOfDigits(num); i++){
+    sum+=(getDigit(num, i)*(8-i));
      }
      return sum;
    }
