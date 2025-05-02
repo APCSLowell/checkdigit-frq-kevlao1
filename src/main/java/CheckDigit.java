@@ -11,7 +11,7 @@ public class CheckDigit
      int adder = num;
      for(int i = 0; i < getNumberOfDigits(num); i++){
     sum+=((adder%10)*(7-i));
-    adder/10;
+    adder/=10;
      }
      return sum;
    }
@@ -27,7 +27,7 @@ public class CheckDigit
     int num = numWithCheckDigit;
      while(num!=0){
   if(num%10 == getCheck(numWithCheckDigit)) return true;
-       else num%10;
+       else num%=10;
      }
      return false;
    }    
