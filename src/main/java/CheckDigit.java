@@ -11,7 +11,7 @@ public class CheckDigit
      for(int i = 1; i <= getNumberOfDigits(num); i++){
     sum = sum + (getDigit(num, i)*(8-i));
      }
-     return sum;
+     return sum%10;
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
